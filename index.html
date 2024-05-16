@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedi-Med.de</title>
+    <style>
+        @media only screen and (max-width: 600px) {
+            /* Style für kleine Bildschirme */
+        }
+        
+        @media only screen and (min-width: 601px) and (max-width:1024px) {
+            /* Style für mittelgroße Bildschirme (Tablets) */
+        }
+        
+        @media only screen and (min-width: 1025px) {
+            /* Styles für große Bildschirme (Desktop) */  
+        }
+        @font-face {
+            font-family: 'Gilroy-Medium'; 
+            src: url('Gilroy-Medium.ttf');
+        }
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Gilroy-Medium;
+        }
+        #überschrift {
+            background-color: #f76741;
+            text-align: center;
+            font-size: 40px;
+            display: block;
+            height: 120px;
+        }
+        #überschrift a {
+            color: white;
+            text-decoration: none;
+        }
+        #navigation-inhalt {
+            background-image: url('pexels-photo-11011756.jpeg');
+            background-size: cover;
+            height: 700px;
+        }
+        /* der link Text in der Navigation */
+        #navigation a {
+            color: black;
+            font-size: 30px;
+            text-decoration: none;
+        }
+        /* der Kasten in dem die Navigationsleiste drin ist */
+        #navigation {
+            font-size: 30px;
+            padding: 0;
+            margin: 0;
+        }
+        /* die Listenansicht der Navigation */
+        #navigation ul {
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+            margin: 0;
+            display: flex;
+        }
+        #navigation ul li {
+            margin-right: 30px;
+            margin-top: 30px;
+        }
+        #navigation ul li a {
+            font-weight: lighter;
+            color: white;
+        }
+        #navigation ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        #Text1 {
+            text-align: right;
+            margin-top: 180px;
+            margin-right: 100px;
+            opacity: 0.5;
+        }
+        .Wort {
+            color: white;
+            font-size: 20px;
+        }
+        .erklarung {
+            margin: auto;
+            display: grid;
+            max-width: 1200px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-flow: column;
+            gap: 60px;
+            justify-content: center;
+            background-color: white;
+        }
+        .block1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(243, 146, 20, 0.5);
+            backdrop-filter: blur(5px); /* Hier wird der Blur-Effekt hinzugefügt */
+            transition: backdrop-filter 1s, opacity 1s;
+             opacity: 0; /* Anfangszustand: unsichtbar */
+
+
+        }
+
+        .block1:hover::before {
+            opacity: 1;
+            transition: 0,5s;
+        }
+        .block1 {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-image: url('bild1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .overlay-block1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .block1:hover .overlay-block1 {
+            opacity: 1;
+            transition: 1s;
+        }
+        .block2, .block3, .block4 {
+            background: blanchedalmond;
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="überschrift">
+        <a href="index.html">Pedi-Med</a>
+    </div> 
+    <div id="navigation-inhalt">
+        <div id="navigation">
+            <ul>
+                <li class="home"><a href="index.html">Home</a></li>
+                <li class="anliegen"><a href="Anliegen.html">Anliegen</a></li>
+                <li class="preisliste"><a href="Preisliste.html">Preisliste</a></li>
+                <li class="kontakt"><a href="kontakt.html">Kontakt</a></li>
+                <li class="impressum"><a href="impressum.html">Impressum</a></li>
+            </ul>
+        </div>
+        <div id="Abschnitt2">
+            <div id="Text1">
+                <p class="Wort">Ich führe Diagnosen von <br> 
+                    Fußdeformitäten sowie<br>
+                    Sekundäranomalien<br> 
+                    durch und behandle sie entsprechend.<br><br>
+                    Zudem habe ich fundierte Medizinische<br> 
+                    Kenntnisse über Apparate,<br>
+                    Wirkstoffe und Präparate.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="erklarung">
+        <div class="block1">
+            <div class="overlay-block1">Fußdeformitäten</div>
+        </div>
+        <div class="block2">:P</div>
+        <div class="block3">xd</div>
+        <div class="block4">haha</div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const block1 = document.querySelector(".block1");
+            const overlayBlock1 = block1.querySelector(".overlay-block1");
+
+            block1.addEventListener("mouseover", function() {
+                overlayBlock1.style.opacity = "1";
+            });
+
+            block1.addEventListener("mouseout", function() {
+                overlayBlock1.style.opacity = "0";
+            });
+        });
+    </script>
+</body>
+</html>
