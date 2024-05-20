@@ -1,38 +1,109 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <style>
-        @media only screen and (max-width: 600px) {
-            /* Style für kleine Bildschirme */
-        }
-        
-        @media only screen and (min-width: 601px) and (max-width:1024px) {
-            /* Style für mittelgroße Bildschirme (Tablets) */
-        }
-        
-        @media only screen and (min-width: 1025px) {
-            /* Styles für große Bildschirme (Desktop) */  
-        }
-        @font-face {
-            font-family: 'Gilroy-Medium'; 
-            src: url('Gilroy-Medium.ttf');
-        }
-        body {
-            padding: 0;
-            margin: 0;
-            font-family: Gilroy-Medium;
-            color: black;
-        } 
-.text1 { 
-    align-text: Center;
-   
+<title>Spende</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
 
- </Style>
- </head>
-        <body>
-        <h1 class="text1">Hey<br> hier wird bald was kommen</h1>
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.spendenfeld {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.spendenfeld h2 {
+    color: #333;
+    border: 3px solid black;
+    margin-top: 200px;
+}
+
+.video-grid {
+  z-index: -1;
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+    
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 177.78%;
+    margin-bottom: 200px;
+    
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttonspende {
+    padding: 10px;
+    font-size: 30px;
+    border-style: none;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.buttonspende:hover {
+    background-color: olivedrab;
+    color: white;
+    box-shadow: 2px 2px 2px gray;
+}
+.wort {
+  font-size: 20px;
+  
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="spendenfeld">
+        <a href="https://www.change.org/search?q=gaza&offset=0" target="_blank">
+            <button class="buttonspende">Ich möchte spenden Optionen sehen</button>
+        </a>
+        <p class="wort">manche Menschen wollen einfach Terrorisieren, ich weiß nicht wieso, <br> das einzige was man von hier aus machen kann ist, <br> kleine beträge zu Spenden</p>
+    </div>
+    <div class="video-grid">
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="Video1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="Video2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="Video3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
