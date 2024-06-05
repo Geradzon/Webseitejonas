@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <meta charset="UTF-8">
+    
+    <title>Jonas-Artwork</title>
+    
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            
+            
+        }
+        @font-face {
+            font-family: 'Gilroy-Medium'; 
+            src: url('fonts/Gilroy-Medium.ttf') format('truetype');
+        }
+       
+
+        #grid-container {
+            display: grid;
+            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            justify-content: center;
+            align-content: center;
+            transition: 1s;
+            
+            
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+        }
+
+        .grid-item img {
+            max-width: 450px;
+            
+
+        }
+
+        .nav-container {
+            z-index: 10;
+            margin-top: 10px;
+        }
+        .nav-container * {
+            text-decoration: none;
+            color: black;
+            margin-bottom: 0px;
+
+        }
+
+        .nav-container   {
+            display: flex;
+            padding-left: 10%;
+            padding-right: 10%;
+            list-style: none;
+            
+           
+            
+        }
+        .navnav-container, button {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            margin-left: 100px;
+            margin-right: 100px;   
+            font-family: 'Gilroy-Medium'; 
+            font-size: 20px;        
+        }
+        .nav-link1:hover {
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);  
+            
+
+            
+        }
+        .nav-link2:hover {
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);  
+            
+            
+        }
+
+        .nav-link3:hover {
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);  
+            
+            
+        }
+        .nav-link1 {
+            transition: 0.2s;
+        }
+      
+
+
+        .nav-container  {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            position: sticky;
+            
+
+            
+        }
+
+        /* Blur the content when hovering over any navigation list item */
+        .nav-container:hover + #grid-container {
+            filter: blur(5px);
+            transition: filter 1s;
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+    
+            <li><a href="#" class="nav-link1"><button>Meine Links</a></button></li>
+            <li><a href="#" class="nav-link2"><button>Fotografien</a></button></li>
+            <li><a href="#" class="nav-link3"><button>Ideen</a></button></li>
+        
+    </div>
+    <div id="grid-container">
+        <div class="grid-item"><img src="bild1.jpg"></div>
+        <div class="grid-item"><img src="bild2.jpg"></div>
+        <div class="grid-item"><img src="bild3.jpg"></div>
+        <div class="grid-item"><img src="bild4.jpg"></div>
+    </div>
+</body>
+</html>
