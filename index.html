@@ -33,11 +33,11 @@
             justify-content: center;
             align-content: center;
             transition: 1s;
-         }
+         
            
             
         
-      
+        }
 
         .grid-item {
             display: flex;
@@ -147,6 +147,7 @@
             background-color: lightcyan;
             color: black;
             transition: 1s;
+
           
 
         }
@@ -159,19 +160,26 @@
             margin: 20px;
             height: 20%;
             transition: 1s;
+            
         }
-      /* Für Bildschirme bis 600px (Mobile) */
+
 @media only screen and (max-width: 600px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        transition: 1s;
+    }
     .nav-container {
         flex-direction: column;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 0px;
+        padding-right: 0px;
         transition: 0.3s;
     }
     .navnav-container, button {
         margin-left: 0;
         margin-right: 0;
-        font-size: 16px;
+        font-size: 20px;
         transition: 0.3s;
     }
     .grid-item img {
@@ -185,11 +193,23 @@
     .font {
         height: 10%;
         transition: 0.3s;
+        
+       
+        
     }
 }
 
 /* Für Bildschirme zwischen 601px und 1024px (Tablets) */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        transition: 1s;
+
+        
+        
+    }
     .nav-container {
         padding-left: 8%;
         padding-right: 8%;
@@ -202,16 +222,18 @@
         transition: 0.3s;
     }
     .grid-item img {
-        max-width: 80%;
+        max-width: 450px;
         transition: 0.3s;
     }
     .text-art {
         font-size: 60px;
         transition: 0.3s;
+        
     }
     .font {
         height: 15%;
         transition: 0.3s;
+        font-family: 
     }
 }
 
@@ -235,11 +257,20 @@
     .text-art {
         font-size: 70px;
         transition: 0.3s;
+        
+        
     }
     .font {
         height: 20%;
         transition: 0.3s;
+        
     }
+    #text-container {
+            justify-content: center;
+            text-align: center;
+            background-color: lightcyan;
+            color: black;
+            transition: 1s;
 }
 
        
