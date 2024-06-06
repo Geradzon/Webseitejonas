@@ -18,6 +18,11 @@
         @font-face {
             font-family: 'Gilroy-Medium'; 
             src: url('fonts/Gilroy-Medium.ttf') format('truetype');
+            
+        }
+        @font-face {
+            font-family: 'BillionDreams_PERSONAL';
+            src: url('fonts/BillionDreams_PERSONAL.ttf') format('truetype');
         }
        
 
@@ -28,9 +33,11 @@
             justify-content: center;
             align-content: center;
             transition: 1s;
+         }
+           
             
-            
-        }
+        
+      
 
         .grid-item {
             display: flex;
@@ -74,26 +81,44 @@
         }
         .nav-link1:hover {
             box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);  
+            background-color: lightblue;
+            padding-left: 50px;
+            padding-right: 50px;
             
 
             
         }
         .nav-link2:hover {
-            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);  
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);
+            background-color: lightblue;
+            padding-left: 50px;
+            padding-right: 50px;  
             
             
         }
 
         .nav-link3:hover {
-            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);  
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);
+            background-color: lightblue;
+            padding-left: 50px;
+            padding-right: 50px;  
             
             
         }
         .nav-link1 {
             transition: 0.2s;
         }
+        .nav-link2 {
+            transition: 0.2s;
+        }
+        .nav-link3 {
+            transition: 0.2s;
+        }
       
-
+        .nav-container ul li {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
 
         .nav-container  {
             display: flex;
@@ -107,11 +132,116 @@
         }
 
         /* Blur the content when hovering over any navigation list item */
-        .nav-container:hover + #grid-container {
+        .nav-container:hover ~ #grid-container {
+            filter: blur(5px);
+            transition: 1s;
+        }
+        .nav-container:hover ~ #text-container {
             filter: blur(5px);
             transition: filter 1s;
             
         }
+        #text-container {
+            justify-content: center;
+            text-align: center;
+            background-color: lightcyan;
+            color: black;
+            transition: 1s;
+          
+
+        }
+        .text-art {
+            font-size: 70px;
+            font-family: 'BillionDreams_PERSONAL';
+
+        }
+        .font {
+            margin: 20px;
+            height: 20%;
+            transition: 1s;
+        }
+      /* Für Bildschirme bis 600px (Mobile) */
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        padding-left: 5%;
+        padding-right: 5%;
+        transition: 0.3s;
+    }
+    .navnav-container, button {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    .grid-item img {
+        max-width: 100%;
+        transition: 0.3s;
+    }
+    .text-art {
+        font-size: 40px;
+        transition: 0.3s;
+    }
+    .font {
+        height: 10%;
+        transition: 0.3s;
+    }
+}
+
+/* Für Bildschirme zwischen 601px und 1024px (Tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .nav-container {
+        padding-left: 8%;
+        padding-right: 8%;
+        transition: 0.3s;
+    }
+    .navnav-container, button {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    .grid-item img {
+        max-width: 80%;
+        transition: 0.3s;
+    }
+    .text-art {
+        font-size: 60px;
+        transition: 0.3s;
+    }
+    .font {
+        height: 15%;
+        transition: 0.3s;
+    }
+}
+
+/* Für Bildschirme ab 1025px (Desktops) */
+@media only screen and (min-width: 1025px) {
+    .nav-container {
+        padding-left: 10%;
+        padding-right: 10%;
+        transition: 0.3s;
+    }
+    .navnav-container, button {
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    .grid-item img {
+        max-width: 450px;
+        transition: 0.3s;
+    }
+    .text-art {
+        font-size: 70px;
+        transition: 0.3s;
+    }
+    .font {
+        height: 20%;
+        transition: 0.3s;
+    }
+}
+
        
     </style>
 </head>
@@ -128,6 +258,16 @@
         <div class="grid-item"><img src="bild2.jpg"></div>
         <div class="grid-item"><img src="bild3.jpg"></div>
         <div class="grid-item"><img src="bild4.jpg"></div>
+    </div>
+    <div id="text-container">
+    
+        <div class="text-art">
+
+            <p class="font">Kunst</p>
+
+        </div>
+    
+    
     </div>
 </body>
 </html>
