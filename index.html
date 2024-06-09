@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <meta charset="UTF-8">
+    
+    <title>Jonas-Artwork</title>
+    
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            
+            
+        }
+        @font-face {
+            font-family: 'Gilroy-Medium'; 
+            src: url('fonts/Gilroy-Medium.ttf') format('truetype');
+            
+        }
+        @font-face {
+            font-family: 'BillionDreams_PERSONAL';
+            src: url('fonts/BillionDreams_PERSONAL.ttf') format('truetype');
+        }
+       
+
+        #grid-container {
+            display: grid;
+            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            justify-content: center;
+            align-content: center;
+            transition: 1s;
+         
+           
+            
+        
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+        }
+
+        .grid-item img {
+            max-width: 450px;
+            
+
+        }
+
+        .nav-container {
+            z-index: 10;
+            margin-top: 10px;
+        }
+        .nav-container * {
+            text-decoration: none;
+            color: black;
+            margin-bottom: 0px;
+
+        }
+
+        .nav-container   {
+            display: flex;
+            padding-left: 10%;
+            padding-right: 10%;
+            list-style: none;
+            
+           
+            
+        }
+        .navnav-container, button {
+            display: flex;
+            border: none;
+            background-color: transparent;
+            margin-left: 100px;
+            margin-right: 100px;   
+            font-family: 'Gilroy-Medium'; 
+            font-size: 20px;        
+        }
+        .nav-link1:hover {
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);  
+            background-color: lightblue;
+            padding-left: 50px;
+            padding-right: 50px;
+            
+
+            
+        }
+        .nav-link2:hover {
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);
+            background-color: lightblue;
+            padding-left: 50px;
+            padding-right: 50px;  
+            
+            
+        }
+
+        .nav-link3:hover {
+            box-shadow: 0px 1px 10px rgb(10, 42, 54, 0.4);
+            background-color: lightblue;
+            padding-left: 50px;
+            padding-right: 50px;  
+            
+            
+        }
+        .nav-link1 {
+            transition: 0.2s;
+        }
+        .nav-link2 {
+            transition: 0.2s;
+        }
+        .nav-link3 {
+            transition: 0.2s;
+        }
+      
+        .nav-container ul li {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+        .nav-container  {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            position: sticky;
+            
+
+            
+        }
+
+        /* Blur the content when hovering over any navigation list item */
+        .nav-container:hover ~ #grid-container {
+            filter: blur(5px);
+            transition: 1s;
+        }
+        .nav-container:hover ~ #text-container {
+            filter: blur(5px);
+            transition: filter 1s;
+            
+        }
+        #text-container {
+            justify-content: center;
+            text-align: center;
+            background-color: lightcyan;
+            color: black;
+            transition: 1s;
+
+          
+
+        }
+        .text-art {
+            font-size: 70px;
+            font-family: 'BillionDreams_PERSONAL';
+
+        }
+        .font {
+            margin: 20px;
+            height: 20%;
+            transition: 1s;
+            
+        }
+
+@media only screen and (max-width: 600px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        transition: 1s;
+    }
+    .nav-container {
+        flex-direction: column;
+        padding-left: 0px;
+        padding-right: 0px;
+        transition: 0.3s;
+    }
+    .navnav-container, button {
+        margin-left: 0;
+        margin-right: 0;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    .grid-item img {
+        max-width: 100%;
+        transition: 0.3s;
+    }
+    .text-art {
+        font-size: 40px;
+        transition: 0.3s;
+    }
+    .font {
+        height: 10%;
+        transition: 0.3s;
+        
+       
+        
+    }
+}
+
+/* Für Bildschirme zwischen 601px und 1024px (Tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    #grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        transition: 1s;
+
+        
+        
+    }
+    .nav-container {
+        padding-left: 8%;
+        padding-right: 8%;
+        transition: 0.3s;
+    }
+    .navnav-container, button {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+    .grid-item img {
+        max-width: 450px;
+        transition: 0.3s;
+    }
+    .text-art {
+        font-size: 60px;
+        transition: 0.3s;
+        
+    }
+    .font {
+        height: 15%;
+        transition: 0.3s;
+      
+    }
+}
+
+/* Für Bildschirme ab 1025px (Desktops) */
+@media only screen and (min-width: 1025px) {
+    .nav-container {
+        padding-left: 10%;
+        padding-right: 10%;
+        transition: 0.3s;
+    }
+    .navnav-container, button {
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    .grid-item img {
+        max-width: 450px;
+        transition: 0.3s;
+    }
+    .text-art {
+        font-size: 70px;
+        transition: 0.3s;
+        
+        
+    }
+    .font {
+        height: 20%;
+        transition: 0.3s;
+        
+    }
+    #text-container {
+            justify-content: center;
+            text-align: center;
+            background-color: lightcyan;
+            color: black;
+            transition: 1s;
+}
+}
+
+       
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+    
+            <li><a href="#" class="nav-link1"><button>Meine Links</a></button></li>
+            <li><a href="fotografien.html" class="nav-link2"><button>Fotografien</a></button></li>
+            <li><a href="#" class="nav-link3"><button>Ideen</a></button></li>
+        
+    </div>
+    <div id="grid-container">
+        <div class="grid-item"><img src="Bilder/bild1.jpg"></div>
+        <div class="grid-item"><img src="Bilder/bild2.jpg"></div>
+        <div class="grid-item"><img src="Bilder/bild3.jpg"></div>
+        <div class="grid-item"><img src="Bilder/bild4.jpg"></div>
+    </div>
+    <div id="text-container">
+    
+        <div class="text-art">
+
+            <p class="font">Kunst</p>
+
+        </div>
+    
+    
+    </div>
+</body>
+</html>
