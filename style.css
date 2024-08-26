@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font-family: gilroy;
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(fonts/Gilroy-Light.ttf);
+}
+#web-container {
+
+}
+.dashallo {
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+    font-size: 100%;
+}
+#web-container {
+    
+
+}
+.dashallo {
+    background-color: blue;
+}
+.dashallo h1{
+   font-size: 1em;
+   font-family: gilroy;
+}
+@font-face {
+    font-family: Gilroy;
+    src: url(fonts/Gilroy-Light.ttf);
+}
+}
+/* Einstellungen für Bildschirme BIS 768 Pixel
+Tablet Display */
+@media screen and (max-width: 768px) {
+    
+}
+/* Einstellungen für Bildschirme BIS 1024 Pixel
+kleinere Laptop Displays */
+@media screen and (max-width: 1024px) {
+    
+}
+/* Einstellungen für Bildschirme BIS 1280 Pixel
+größere Laptops */
+
+@media screen  and (max-width: 1280px) {
+    
+}
+/* Einstellungen für Bildschirme BIS 1600 Pixel
+Standart Desktop Displays */
+
+@media screen and (max-width: 1600px) {
+    
+}
+
+/* Einstellungen für Bildschirme BIS 1920 Pixel 
+Widescreens & 4K Displays*/
+ 
+@media screen and (max-width: 1920px) {
+    
+}
+
