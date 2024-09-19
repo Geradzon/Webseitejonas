@@ -59,7 +59,7 @@ h1 {
 .h2 {
     position: absolute;
     left: 50%;
-    top: 10%;
+    bottom: 50px;
     transform: translate(-50%, -50%);
     font-size: 70px;
     color: white;
